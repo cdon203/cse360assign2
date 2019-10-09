@@ -18,9 +18,7 @@ public class AddingMachine {
 	/**
 	 * Main object method. Nothing is changed
 	 */
-	public AddingMachine () {
-		
-	}
+	public AddingMachine () {}
 	
 	/**
 	 * Returns the int total
@@ -35,9 +33,9 @@ public class AddingMachine {
 	 * @param value
 	 */
 	public void add (int value) {
-		total = total + value; 					// Adding the entered value to the current total
+		total = total + value; 						// Adding the entered value to the current total
 		
-		equation = equation + " + " + value;	// Appending a string to equation so that it prints correctly in toString()
+		equation = equation + " + " + value;		// Appending a string to equation so that it prints correctly in toString()
 	}
 	
 	/**
@@ -45,23 +43,24 @@ public class AddingMachine {
 	 * @param value
 	 */
 	public void subtract (int value) {
-		total = total - value; 					// Subtracting the entered value from the current total
+		total = total - value;						// Subtracting the entered value from the current total
 		
-		equation = equation + " - " + value;	// Appending a string to equation so that it prints correctly in toString()
+		equation = equation + " - " + value;		// Appending a string to equation so that it prints correctly in toString()
 	}
 	
 	/**
 	 * Converts total to a string and returns
 	 */
 	public String toString () {
-		return equation;
+		return equation;			// Returning equation
 	}
 
 	/**
-	 * Resets total to value of 0
+	 * Resets total to value of 0 and clears equation
 	 */
 	public void clear() {
-	total = 0;
+		total = 0;				// Setting total back to 0
+		equation = "0";			// Setting equation back to "0"
 	}
 		 
 	/**
@@ -79,6 +78,15 @@ public class AddingMachine {
 		 	myCalculator.add(6);		// adding 6 to total
 		 	myCalculator.subtract(3);	// subtracting 3 from total
 		 	
+		 	System.out.println("The euation is " + myCalculator.toString());	// Printing the equation using toString() method
+		 	System.out.println("The total is " + myCalculator.getTotal());		// Printing the final value total
+		 	
+		 	myCalculator.clear();  		// Clearing object
+		 	
+		 	myCalculator.add(2);		// adding 2 to total
+		 	myCalculator.subtract(3);	// subtracting 2 from total
+		 	
+		 	System.out.println("\n");
 		 	System.out.println("The euation is " + myCalculator.toString());	// Printing the equation using toString() method
 		 	System.out.println("The total is " + myCalculator.getTotal());		// Printing the final value total
 		 	
