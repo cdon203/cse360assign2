@@ -12,7 +12,7 @@ package cse360assign2;
 public class AddingMachine {
 
 	// Variables
-	private int total = 0;				// total value that will be manipulated by methods. Initially set to 0
+	private int total = 0;			// total value that will be manipulated by methods. Initially set to 0
 	private String equation = "0";		// equation to be printed in toString. Begins the equation with a "0" to show initial value.
 	
 	/**
@@ -33,7 +33,7 @@ public class AddingMachine {
 	 * @param value
 	 */
 	public void add (int value) {
-		total = total + value; 						// Adding the entered value to the current total
+		total = total + value; 				// Adding the entered value to the current total
 		
 		equation = equation + " + " + value;		// Appending a string to equation so that it prints correctly in toString()
 	}
@@ -43,7 +43,7 @@ public class AddingMachine {
 	 * @param value
 	 */
 	public void subtract (int value) {
-		total = total - value;						// Subtracting the entered value from the current total
+		total = total - value;				// Subtracting the entered value from the current total
 		
 		equation = equation + " - " + value;		// Appending a string to equation so that it prints correctly in toString()
 	}
@@ -59,7 +59,7 @@ public class AddingMachine {
 	 * Resets total to value of 0 and clears equation
 	 */
 	public void clear() {
-		total = 0;				// Setting total back to 0
+		total = 0;			// Setting total back to 0
 		equation = "0";			// Setting equation back to "0"
 	}
 		 
